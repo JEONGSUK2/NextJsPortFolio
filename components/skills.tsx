@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from "react";
-import { setTimeout } from "timers/promises";
+
 
 export default function Skills(){
 
@@ -13,7 +13,7 @@ export default function Skills(){
     }
     
 
-    const [progressBar, setprogressBar] =useState<boolean>(false);
+    const [progressBar, setProgressBar] =useState<boolean>(false);
     const [itemList, setItemList] = useState<SkillItem[]>([]); // 어떠한 데이터의 배열을 담을때 useState 옆 <데이터[]>를 입력해준다.
 
     useEffect(() => {
@@ -25,6 +25,10 @@ export default function Skills(){
           const data = await res.json();
           setItemList(data.data);
        
+          setTimeout(() => {
+            setProgressBar(true)
+          }, 500);
+
         } catch (error) {
           console.log(error);
         }
