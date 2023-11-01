@@ -1,6 +1,17 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Nav from '@/components/nav'
+
+// fontawsome 사용방법 (전역으로 사용하기 위해 글로벌 - layout에 전역으로 사용)
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import { Main } from 'next/document'
+
+
+
+
+config.autoAddCss = false
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +27,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Nav />
+
+        <p>글로벌 레이아웃</p>
+      
+       
+        {children}</body>
     </html>
   )
 }
+
+
