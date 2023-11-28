@@ -6,7 +6,6 @@ import Image from "next/image";
 import { faUser, faCode, faWindowMaximize } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-
 interface NavItem {
     name : string,
     link: string
@@ -63,11 +62,15 @@ export default function Nav(){
                 </div>
             </div>
         </div>
+
+
         <div className="fixed right-5 top-5 transition-all duration-500 z-[51] cursor-pointer md:hidden " onClick={toggleMenu}>
             <div className={`w-[90px] h-[10px] bg-black dark:bg-[#ebf4f1] rounded m-[5px] transition-all duration-500 ${menuActive && 'rotate-45 translate-y-[13px] bg-slate-50'}` }></div>
             <div className={`w-[90px] h-[5px] bg-black dark:bg-[#ebf4f1] rounded m-[5px] transition-all duration-500  ${menuActive && 'opacity-0 -translate-x-8 rotate-[360deg] ' }`}></div>
             <div className={`w-[90px] h-[10px] bg-black dark:bg-[#ebf4f1] rounded m-[5px] transition-all duration-500  ${menuActive && '-rotate-45 -translate-y-[13px] bg-red-600'}`}></div>
         </div>
+        
+        
         <div className={`w-72 h-full fixed -right-72 top-0 bg-gray-100 z-50 p-12 box-border transition-all duration-500 md:hidden  ${menuActive ? 'right-[0px] bg-[#FA8072]' :''}`}>
            <div className="text-center mt-6">
        
@@ -79,7 +82,7 @@ export default function Nav(){
                     menuList.map((e,i)=>{
                         return(
                             <li className="pt-5 pb-2 border-b hover:font-bold hover:text-blue-950" key={i}><FontAwesomeIcon icon={icons[i]}/><Link href={e.link}>{e.name}</Link></li>
-                        )
+                            )
                     })
                 }
             </ul>

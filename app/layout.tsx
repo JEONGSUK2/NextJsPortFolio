@@ -28,11 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Nav />
-
-        <p>글로벌 레이아웃</p>
-      
-       
+        <Nav />  
         {children}</body>
     </html>
   )

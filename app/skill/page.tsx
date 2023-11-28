@@ -5,6 +5,7 @@ import style from './page.module.css'
 
 export default function Skill(){          //function옆에 변수명의 시작은 무조건 대문자로 작성해줄 것
 
+
     return (
         <>
             <div className="w-full pt-12 mt-16 px-[2%] pb-8">

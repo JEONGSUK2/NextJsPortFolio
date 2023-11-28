@@ -13,7 +13,7 @@ interface AbootData{
     data: AbootItem[];
 }
 
-export async function GET() : Promise<NextResponse>{
+export async function GET() :  Promise<NextResponse>{
 
     const data :AbootItem[] = [
         {

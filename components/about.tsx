@@ -2,13 +2,7 @@
 
 import { useEffect, useState } from "react";
 import  React  from "react";
-interface AbootItem {
-  title: string;
-  desc?: string;
-  desc2?: string;
-  date?: string[];
-  dateDesc?: string[];
-}
+
 
 export default function About() {
   interface AbootItem {
